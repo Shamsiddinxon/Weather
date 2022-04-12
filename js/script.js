@@ -8,6 +8,7 @@ const icon = document.querySelector(".icon");
 const cloudPutput = document.querySelector(".cloud");
 const humidityOutput = document.querySelector(".humidity");
 const windOutput = document.querySelector(".wind");
+const rainOutput = document.querySelector(".rain");
 const form = document.querySelector(".panel__form");
 const search = document.querySelector(".panel__search");
 const btn = document.querySelector(".panel__submit");
@@ -91,6 +92,7 @@ function fechWeatherData() {
       cloudPutput.innerHTML = data.current.cloud + "%";
       humidityOutput.innerHTML = data.current.humidity + "%";
       windOutput.innerHTML = data.current.wind_kph + "km/h";
+      rainOutput.innerHTML = data.current.precip_mm + "mm";
 
       let timeOfDay = "day";
       const code = data.current.condition.code;
