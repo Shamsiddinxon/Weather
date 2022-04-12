@@ -14,24 +14,25 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="weather-app">
-        <div class="container">
-          <h3 class="brand">the weather</h3>
+    <div class="app">
+        <div class="container left">
+          <h3 class="title">the weather</h3>
           <div class="left__box">
-           <h1 class="temp"> </h1>
-           <div class="city-time">
-              <h1 class="name">London</h1>
+           <h1 class="left__box-c"> </h1>
+           <div class="left__box-descs">
+
+           </div>
+           <div class="left__box-city-time">
+              <h1 class="name"></h1>
               <small>
                   <span class="time"></span>
-
                   -
-
                   <span class="data">
                       
                   </span>
                 </small>
             </div>
-            <div class="weather">
+            <div class="left__box-weather">
                 <img src="" alt="icon" class="icon" width="50" height="50">
                 <span class="condition">Cloudy</span>
             </div>
@@ -39,21 +40,22 @@
         </div>
 
         <div class="panel">
-            <form id="locationInput" class="form">
-                <input type="text" class="search" placeholder="Search Location..." />
-                <button type="submit" class="submit">
+            <form id="locationInput" class="panel__form">
+                <input type="text" class="panel__search" placeholder="Search Location..." />
+                <button type="submit" class="panel__submit">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
 
-            <ul class="cities">
-                <li class="city">New York</li>
-                <li class="city">New York</li>
-                <li class="city">New York</li>
-                <li class="city">New York</li>
+            <ul class="panel__cities">
+                <li class="panel__city" id="1">Namangan</li>
+                <li class="panel__city" id="2">Sirdaryo</li>
+                <li class="panel__city" id="3">Andijon</li>
+                <li class="panel__city" id="4">Buxoro</li>
+                <li class="panel__city" id="5">Qashqadaryo</li>
             </ul>
 
-            <ul class="detalis">
+            <ul class="panel__detalis">
                 <h4>Weahter Details</h4>
                 <li>
                     <span>Cloudy</span>

@@ -13,10 +13,10 @@ h3 {
   font-weight: 400;
 }
 
-.weather-app {
+.app {
   min-height: 100vh;
-  background-image: url(../img/day.claudy.jpg);
-  background-position: center;
+  /* background-image: url(../img/day.claudy.jpg); */
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -25,7 +25,7 @@ h3 {
   opacity: 1;
 }
 
-.weather-app::before {
+.app::before {
   content: "";
   position: absolute;
   top: 0;
@@ -35,7 +35,7 @@ h3 {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.container {
+.left {
   position: absolute;
   top: 0;
   left: 0;
@@ -54,30 +54,40 @@ h3 {
   align-items: center;
 }
 
-.temp,
-.city-time,
+.left__box-c,
+.left__box-city-time,
 .weather {
   margin: 0.1em;
 }
 
-.city-time {
+.left__box-descs {
+  display: flex;
+  align-items: center;
+}
+
+.left__box-city-time {
   margin-right: 15px;
 }
 
-.city-time h1 {
+.left__box-city-time h1 {
   margin: 0;
   margin-bottom: 0.2em;
   font-size: 3em;
 }
 
-.temp {
+.left__box-c {
   font-size: 7em;
   margin: 0;
 }
 
-.weather img {
+.left__box-weather img {
   display: block;
   margin: 0.5em 0;
+  text-align: center;
+}
+
+.left__box-weather {
+  text-align: center;
 }
 
 .panel {
@@ -100,7 +110,7 @@ h3 {
   margin-bottom: 3em;
 }
 
-.submit {
+.panel__submit {
   position: absolute;
   top: 0;
   right: 0;
@@ -120,7 +130,7 @@ h3 {
   color: #000;
 }
 
-.search {
+.panel__search {
   background: none;
   border: none;
   border-bottom: 1px solid #ccc;
@@ -148,16 +158,16 @@ h3 {
   margin: 2em 0;
 }
 
-.city {
+.panel__city {
   display: block;
   cursor: pointer;
 }
 
-.city:hover {
+.panel__city:hover {
   color: #fff;
 }
 
-.detalis li {
+.panel__detalis li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -172,7 +182,7 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 552px) {
   html {
     font-size: 12px;
   }
@@ -181,5 +191,20 @@ h3 {
 @media only screen and (max-width: 300px) {
   .weather-app {
     min-height: 40em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left__box {
+    /* min-height: 40em; */
+    /* display: block; */
+    flex-direction: column;
+    align-items: center;
   }
 }
