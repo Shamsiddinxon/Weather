@@ -58,7 +58,7 @@ function dayOfTheWeek(day, moth, year) {
     "Friday",
     "Saturday",
   ];
-  return weekday[new Date(`${day}/${moth}/${year}`).getDay()];
+  return weekday[new Date(day / moth / year).getDay()];
 }
 
 function fechWeatherData() {
@@ -67,8 +67,6 @@ function fechWeatherData() {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-
       temp.innerHTML = data.current.temp_c + "&#176 ";
       conditionOutput.innerHTML = data.current.condition.text;
 
